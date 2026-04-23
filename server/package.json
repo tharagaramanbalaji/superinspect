@@ -1,0 +1,10 @@
+{
+  "name": "@superinspect/server",
+  "version": "0.1.0",
+  "main": "server.js",
+  "dependencies": {
+    "socket.io": "^4.7.5",
+    "cors": "^2.8.5",
+    "express": "^4.19.2"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "name": "superinspect-workspace",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "install:all": "cd sdk && npm install && cd ../server && npm install && cd ../example-app && npm install && cd ../dashboard && npm install",
+    "start:server": "node server/server.js",
+    "start:app": "node example-app/index.js",
+    "start:dashboard": "npm run dev --prefix dashboard",
+    "start:frontend": "npx serve -l 8000 example-frontend",
+    "start": "npx concurrently -k -c \"bgBlue.bold,bgGreen.bold,bgYellow.bold,bgMagenta.bold\" -n \"SERVER,API,DASH,SITE\" \"npm run start:server\" \"npm run start:app\" \"npm run start:dashboard\" \"npm run start:frontend\""
+  }
+}
